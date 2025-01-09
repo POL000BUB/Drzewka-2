@@ -5,6 +5,21 @@ namespace WinFormsApp4
 {
     public partial class Form1 : Form
     {
+        String[] gminy = [
+            "Brzozowo",
+            "Brz√≥zki Ma≈Çe",
+            "Brz√≥zki Wielkie",
+            "Brz√≥zki ≈örednie",
+            "Ma≈Ça Wioska",
+            "Wielka Wioska",
+            "Zakrƒôtowice",
+            "Staw√≥wka",
+            "Dolne Bagienko",
+            "G√≥rne Bagienko",
+            "Krzaczewo",
+            "Patykowo"
+        ];
+
         public Form1()
         {
             InitializeComponent();
@@ -57,21 +72,38 @@ namespace WinFormsApp4
             int Inne = (int)numericUpDown8.Value;
 
             RadioButton[] radioButtons = [
-                radioButton1, 
-                radioButton2, radioButton3, radioButton4,
-                radioButton5, radioButton6,
-                radioButton7, radioButton8,
-                radioButton9, radioButton10, radioButton11,
+                radioButton1,
+                radioButton2,
+                radioButton3,
+                radioButton4,
+                radioButton5,
+                radioButton6,
+                radioButton7,
+                radioButton8,
+                radioButton9,
+                radioButton10,
+                radioButton11,
                 radioButton12
                 ];
 
+            for (int i = 0; i < radioButtons.Length; i++)
+            {
+                if (radioButtons[i].Checked)
+                {
+                    string gmina = gminy[i];
+                    string message = string.Format("Gmina {0} z≈Ço≈ºy≈Ça dane: \n\n Brzozy: {1}\n Sosny: {2}\n Swierki: {3}\n Deby: {4}\n Lipy: {5}\n Leszczyny: {6}\n Topole: {7} \n Inne: {8} \n", gmina, Brzozy, Sosny, Swierki, Deby, Lipy, Leszczyny, Topole, Inne);
+
+                    MessageBox.Show(message);
+                }
+            }
+
             if (radioButton1.Checked)
             {
-                MessageBox.Show("Gmina Brzozowo z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina Brzozowo zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -79,11 +111,11 @@ namespace WinFormsApp4
             }
             else if (radioButton2.Checked)
             {
-                MessageBox.Show("Gmina BrzÛzki Ma≥e z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina BrzÔøΩzki MaÔøΩe zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -91,11 +123,11 @@ namespace WinFormsApp4
             }
             else if (radioButton3.Checked)
             {
-                MessageBox.Show("Gmina BrzÛzki Wielkie z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina BrzÔøΩzki Wielkie zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -103,11 +135,11 @@ namespace WinFormsApp4
             }
             else if (radioButton4.Checked)
             {
-                MessageBox.Show("Gmina BrzÛzki årednie z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina BrzÔøΩzki ÔøΩrednie zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -115,11 +147,11 @@ namespace WinFormsApp4
             }
             else if (radioButton5.Checked)
             {
-                MessageBox.Show("Gmina Ma≥a Wioska z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina MaÔøΩa Wioska zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -127,11 +159,11 @@ namespace WinFormsApp4
             }
             else if (radioButton6.Checked)
             {
-                MessageBox.Show("Gmina Wielka Wioska z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina Wielka Wioska zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -139,11 +171,11 @@ namespace WinFormsApp4
             }
             else if (radioButton7.Checked)
             {
-                MessageBox.Show("Gmina ZakrÍtowice z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina ZakrÔøΩtowice zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -151,11 +183,11 @@ namespace WinFormsApp4
             }
             else if (radioButton8.Checked)
             {
-                MessageBox.Show("Gmina StawÛwek z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina StawÔøΩwek zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -163,11 +195,11 @@ namespace WinFormsApp4
             }
             else if (radioButton9.Checked)
             {
-                MessageBox.Show("Gmina Dolne Bagienko z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina Dolne Bagienko zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -175,11 +207,11 @@ namespace WinFormsApp4
             }
             else if (radioButton10.Checked)
             {
-                MessageBox.Show("Gmina GÛrne Bagienko z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina GÔøΩrne Bagienko zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -187,11 +219,11 @@ namespace WinFormsApp4
             }
             else if (radioButton11.Checked)
             {
-                MessageBox.Show("Gmina Krzaczewo z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina Krzaczewo zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -199,11 +231,11 @@ namespace WinFormsApp4
             }
             else if (radioButton12.Checked)
             {
-                MessageBox.Show("Gmina Patykowo z≥oøy≥a dane. \n\n" +
+                MessageBox.Show("Gmina Patykowo zÔøΩoÔøΩyÔøΩa dane. \n\n" +
                     "Brzoza: " + Brzozy + "\n" +
                     "Sosna: " + Sosny + "\n" +
-                    "åwierki: " + Swierki + "\n" +
-                    "Dπb: " + Deby + "\n" +
+                    "ÔøΩwierki: " + Swierki + "\n" +
+                    "DÔøΩb: " + Deby + "\n" +
                     "Lipa: " + Lipy + "\n" +
                     "Leszczyna: " + Leszczyny + "\n" +
                     "Topola: " + Topole + "\n" +
@@ -229,12 +261,12 @@ namespace WinFormsApp4
                 int brakujacedrzewa = (int)Math.Ceiling((Brzozy / 0.8) - sumadrzew);
                 int drzewadodatkowe = brakujacedrzewa * 4;
 
-                MessageBox.Show("Liczba brzÛz przekracza 80% drzewostanu gminy.\n" +
-                                "Naleøy dosadziÊ " + drzewadodatkowe + " drzew innych gatunkÛw, aby brzozy stanowi≥y mniej niø 80% drzewostanu gminy.");
+                MessageBox.Show("Liczba brzÔøΩz przekracza 80% drzewostanu gminy.\n" +
+                                "NaleÔøΩy dosadziÔøΩ " + drzewadodatkowe + " drzew innych gatunkÔøΩw, aby brzozy stanowiÔøΩy mniej niÔøΩ 80% drzewostanu gminy.");
             }
             else
             {
-                MessageBox.Show("Liczba brzÛz nie przekracza 80% drzewostanu gminy.");
+                MessageBox.Show("Liczba brzÔøΩz nie przekracza 80% drzewostanu gminy.");
             }
         }
     }
